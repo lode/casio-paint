@@ -1,0 +1,142 @@
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1578
+File Name:MSPAINT
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\AxesOff
+\ViewWindow 1,127,0,63,1
+\Prog "MSP DRAW"
+71\->B:33\->C:0\->M:0\->O
+\Lbl A
+\Prog "MSP MSSG"
+\Lbl B
+\If O=8426
+\Then 8426\->O
+B-15\<=99\=>\Text 3,106," "
+B-15\<=9\=>\Text 3,102," "
+\Text 3,98,B-15
+C-9\<=9\=>\Text 3,119," "
+\Text 3,115,C-9
+\IfEnd
+\Green \PxlOff C,127
+\Green \PxlOff 9,B
+\Do:\Getkey\->A
+\LpWhile A=0
+A=47\=>\GotoX
+A=44\=>\GotoC
+A=68\=>\GotoE
+A=38\=>\Prog "MSP MOVE"
+A=28\=>\Prog "MSP MOVE"
+A=27\=>\Prog "MSP MOVE"
+A=37\=>\Prog "MSP MOVE"
+A=31\=>\Goto0
+A=72\=>\Goto1
+A=62\=>\Goto2
+A=52\=>\Goto3
+A=56\=>\Goto4
+A=74\=>\Goto7
+A=64\=>\Goto8
+A=54\=>\Goto9
+\GotoB
+\Lbl C
+\For 10\->A \To 46 \Step 6
+\Lbl D
+\Text A,16,"                            "
+\Orange \Text A,16,"                            "
+\Green \Text A,16,"                           "
+\Green \Text A,123," "
+\If A=46
+\Then 49\->A:\GotoD
+\IfEnd
+\Next 
+\GotoA
+\Lbl E
+\If O=0
+\Then 8426\->O
+\Green \Text 3,106,"     "
+\Text 3,110,"    "
+\Green \Text 3,67,"\(-)"
+1\->\r:\Text 3,72,\r
+\Green \Text 3,76,"\(-)"
+7\->\theta:\Text 3,81,\theta
+\Green \Text 3,85,"\(-) \(-)"
+71\->B:\Text 3,98,B-15
+\Green \Text 3,110,"\(-)"
+33\->C:\Text 3,115,C-9
+\Green \Text 3,123,"\(-)"
+\GotoA
+\IfEnd
+\If O=8426
+\Then 0\->O
+\Green \Text 3,67,"               "
+\Text 3,72,"            "
+\Green \Text 3,105,"\(-)"
+1\->\r:\Text 3,110,\r
+\Green \Text 3,114,"\(-)"
+7\->\theta:\Text 3,119,\theta
+\Green \Text 3,123,"\(-)"
+\GotoA
+\IfEnd
+\Lbl 0
+\Prog "MSP PNT"
+\GotoA
+\Lbl 1
+110\->A:O=8426\=>72\->A
+1\->\r:\Text 3,A,\r
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO PAINT A POINT"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 2
+0\->Z
+110\->A:O=8426\=>72\->A
+2\->\r:\Text 3,A,\r
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO PAINT A LINE"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 3
+110\->A:O=8426\=>72\->A
+3\->\r:\Text 3,A,\r
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO PAINT A CIRCLE"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 4
+110\->A:O=8426\=>72\->A
+4\->\r:\Text 3,A,"C"
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO USE THE GUM"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 7
+119\->A:O=8426\=>81\->A
+7\->\theta:\Text 3,A,\theta
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"NOW USING COLOR BLUE"
+\GotoB
+\Lbl 8
+119\->A:O=8426\=>81\->A
+8\->\theta:\Text 3,A,\theta
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"NOW USING COLOR ORANGE"
+\GotoB
+\Lbl 9
+119\->A:O=8426\=>81\->A
+9\->\theta:\Text 3,A,\theta
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"NOW USING COLOR GREEN"
+\GotoB
+\Lbl X
+\Cls:\ClrText:\Stop
+\Lbl Z
+
+%End

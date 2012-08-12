@@ -1,0 +1,60 @@
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:364
+File Name:MSP MOVE
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+A=38\=>\Goto1
+A=28\=>\Goto2
+A=27\=>\Goto3
+A=37\=>\Goto4
+\Lbl 1
+B=16\=>\GotoZ
+\Green \PxlOn 9,B
+B-1\->B
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=38\ And D=0
+\If A=38\ And B>25
+\Then B-9\->B
+\IfEnd
+\GotoZ
+\Lbl 2
+C=10\=>\GotoZ
+\Green \PxlOn C,127
+C-1\->C
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=28\ And D=0
+\If A=28\ And C>14
+\Then C-4\->C
+\IfEnd
+\GotoZ
+\Lbl 3
+B=126\=>\GotoZ
+\Green \PxlOn 9,B
+B+1\->B
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=27\ And D=0
+\If A=27\ And B<117
+\Then B+9\->B
+\IfEnd
+\GotoZ
+\Lbl 4
+C=54\=>\GotoZ
+\Green \PxlOn C,127
+C+1\->C
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=37\ And D=0
+\If A=37\ And C<50
+\Then C+4\->C
+\IfEnd
+\GotoZ
+\Lbl Z
+
+%End

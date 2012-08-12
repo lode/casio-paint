@@ -1,0 +1,89 @@
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1141
+File Name:MSP DRAW
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Cls
+\Green \F-Line 2,1,126,1
+\Green \F-Line 127,2,127,62
+\Green \F-Line 126,63,2,63
+\Green \F-Line 1,62,1,2
+\Green \Text 3,2,"\(-)MSPAINT"
+\Green \Text 3,36,"\(-)"
+\Green \Text 3,105,"\(-)"
+1\->\r:\Text 3,110,\r
+\Green \Text 3,114,"\(-)"
+7\->\theta:\Text 3,119,\theta
+\Green \Text 3,123,"\(-)"
+\Green \F-Line 1,9,127,9
+\Green \F-Line 15,9,15,55
+\Green \F-Line 1,35,15,35
+\Green \F-Line 1,55,127,55
+\Green \Text 57,3,"\{i}:"
+\Text 57,12,"LODE.LEKKEREKWAL.COM\slashGR"
+\Green \Text 11,42,"MSPAINT FOR GC"
+\Green \Text 18,45,"MADE BY LODEC"
+\Green \Text 25,57,"(C) 2003"
+\Text 35,19,"USE ORANGE PREFIX TO PAINT"
+\Orange \Text 35,36,"ORANGE"
+\Text 42,33,"USE     TO NAVIGATE"
+\Orange \Text 42,50,"<"
+\Orange \Text 42,54,"O"
+\Orange \PxlOff 44,54
+\Orange \PxlOff 44,56
+\Orange \Text 42,58,">"
+\Orange \Text 11,3,"1"
+\PxlOn 13,11
+\Orange \Text 17,3,"2"
+\F-Line 9,20,13,18
+\Orange \Text 23,3,"3"
+\F-Line 10,23,12,23
+\F-Line 13,24,13,26
+\F-Line 12,27,10,27
+\F-Line 9,26,9,24
+\Orange \Text 29,3,"C"
+\Text 29,3,"CLR"
+\Orange \Text 37,3,"7"
+\For 37\->A \To 41
+\F-Line 9,A,13,A
+\Next 
+\Orange \Text 43,3,"8"
+\For 43\->A \To 47
+\Orange \F-Line 9,A,13,A
+\Next 
+\Orange \Text 49,3,"9"
+\For 49\->A \To 53
+\Green \F-Line 9,A,13,A
+\Next 
+\Text 49,19,"EXE TO START"
+\Orange \Text 49,19,"EXE"
+\Text 49,77,"EXIT TO STOP"
+\Orange \Text 49,77,"EXIT"
+\Do:\Getkey\->A
+\LpWhile A\<>31\ And A\<>47
+A=47\=>\GotoX
+\Green \Text 11,42,"               "
+\Green \Text 18,45,"              "
+\Green \Text 25,57,"        "
+\Orange \Text 35,36,"       "
+\Text 35,19,"                           "
+\Orange \Text 42,50,"   "
+\Text 42,33,"                    "
+\Orange \Text 49,19,"   "
+\Text 49,19,"            "
+\Orange \Text 49,77,"    "
+\Text 49,77,"            "
+\GotoZ
+\Lbl X
+\Cls:\ClrText:\Stop
+\Lbl Z
+
+%End

@@ -1,0 +1,433 @@
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1578
+File Name:MSPAINT
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\AxesOff
+\ViewWindow 1,127,0,63,1
+\Prog "MSP DRAW"
+71\->B:33\->C:0\->M:0\->O
+\Lbl A
+\Prog "MSP MSSG"
+\Lbl B
+\If O=8426
+\Then 8426\->O
+B-15\<=99\=>\Text 3,106," "
+B-15\<=9\=>\Text 3,102," "
+\Text 3,98,B-15
+C-9\<=9\=>\Text 3,119," "
+\Text 3,115,C-9
+\IfEnd
+\Green \PxlOff C,127
+\Green \PxlOff 9,B
+\Do:\Getkey\->A
+\LpWhile A=0
+A=47\=>\GotoX
+A=44\=>\GotoC
+A=68\=>\GotoE
+A=38\=>\Prog "MSP MOVE"
+A=28\=>\Prog "MSP MOVE"
+A=27\=>\Prog "MSP MOVE"
+A=37\=>\Prog "MSP MOVE"
+A=31\=>\Goto0
+A=72\=>\Goto1
+A=62\=>\Goto2
+A=52\=>\Goto3
+A=56\=>\Goto4
+A=74\=>\Goto7
+A=64\=>\Goto8
+A=54\=>\Goto9
+\GotoB
+\Lbl C
+\For 10\->A \To 46 \Step 6
+\Lbl D
+\Text A,16,"                            "
+\Orange \Text A,16,"                            "
+\Green \Text A,16,"                           "
+\Green \Text A,123," "
+\If A=46
+\Then 49\->A:\GotoD
+\IfEnd
+\Next 
+\GotoA
+\Lbl E
+\If O=0
+\Then 8426\->O
+\Green \Text 3,106,"     "
+\Text 3,110,"    "
+\Green \Text 3,67,"\(-)"
+1\->\r:\Text 3,72,\r
+\Green \Text 3,76,"\(-)"
+7\->\theta:\Text 3,81,\theta
+\Green \Text 3,85,"\(-) \(-)"
+71\->B:\Text 3,98,B-15
+\Green \Text 3,110,"\(-)"
+33\->C:\Text 3,115,C-9
+\Green \Text 3,123,"\(-)"
+\GotoA
+\IfEnd
+\If O=8426
+\Then 0\->O
+\Green \Text 3,67,"               "
+\Text 3,72,"            "
+\Green \Text 3,105,"\(-)"
+1\->\r:\Text 3,110,\r
+\Green \Text 3,114,"\(-)"
+7\->\theta:\Text 3,119,\theta
+\Green \Text 3,123,"\(-)"
+\GotoA
+\IfEnd
+\Lbl 0
+\Prog "MSP PNT"
+\GotoA
+\Lbl 1
+110\->A:O=8426\=>72\->A
+1\->\r:\Text 3,A,\r
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO PAINT A POINT"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 2
+0\->Z
+110\->A:O=8426\=>72\->A
+2\->\r:\Text 3,A,\r
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO PAINT A LINE"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 3
+110\->A:O=8426\=>72\->A
+3\->\r:\Text 3,A,\r
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO PAINT A CIRCLE"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 4
+110\->A:O=8426\=>72\->A
+4\->\r:\Text 3,A,"C"
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"PRESS EXE TO USE THE GUM"
+\Orange \Text 57,36,"EXE"
+\GotoB
+\Lbl 7
+119\->A:O=8426\=>81\->A
+7\->\theta:\Text 3,A,\theta
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"NOW USING COLOR BLUE"
+\GotoB
+\Lbl 8
+119\->A:O=8426\=>81\->A
+8\->\theta:\Text 3,A,\theta
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"NOW USING COLOR ORANGE"
+\GotoB
+\Lbl 9
+119\->A:O=8426\=>81\->A
+9\->\theta:\Text 3,A,\theta
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"NOW USING COLOR GREEN"
+\GotoB
+\Lbl X
+\Cls:\ClrText:\Stop
+\Lbl Z
+
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1141
+File Name:MSP DRAW
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Cls
+\Green \F-Line 2,1,126,1
+\Green \F-Line 127,2,127,62
+\Green \F-Line 126,63,2,63
+\Green \F-Line 1,62,1,2
+\Green \Text 3,2,"\(-)MSPAINT"
+\Green \Text 3,36,"\(-)"
+\Green \Text 3,105,"\(-)"
+1\->\r:\Text 3,110,\r
+\Green \Text 3,114,"\(-)"
+7\->\theta:\Text 3,119,\theta
+\Green \Text 3,123,"\(-)"
+\Green \F-Line 1,9,127,9
+\Green \F-Line 15,9,15,55
+\Green \F-Line 1,35,15,35
+\Green \F-Line 1,55,127,55
+\Green \Text 57,3,"\{i}:"
+\Text 57,12,"LODE.LEKKEREKWAL.COM\slashGR"
+\Green \Text 11,42,"MSPAINT FOR GC"
+\Green \Text 18,45,"MADE BY LODEC"
+\Green \Text 25,57,"(C) 2003"
+\Text 35,19,"USE ORANGE PREFIX TO PAINT"
+\Orange \Text 35,36,"ORANGE"
+\Text 42,33,"USE     TO NAVIGATE"
+\Orange \Text 42,50,"<"
+\Orange \Text 42,54,"O"
+\Orange \PxlOff 44,54
+\Orange \PxlOff 44,56
+\Orange \Text 42,58,">"
+\Orange \Text 11,3,"1"
+\PxlOn 13,11
+\Orange \Text 17,3,"2"
+\F-Line 9,20,13,18
+\Orange \Text 23,3,"3"
+\F-Line 10,23,12,23
+\F-Line 13,24,13,26
+\F-Line 12,27,10,27
+\F-Line 9,26,9,24
+\Orange \Text 29,3,"C"
+\Text 29,3,"CLR"
+\Orange \Text 37,3,"7"
+\For 37\->A \To 41
+\F-Line 9,A,13,A
+\Next 
+\Orange \Text 43,3,"8"
+\For 43\->A \To 47
+\Orange \F-Line 9,A,13,A
+\Next 
+\Orange \Text 49,3,"9"
+\For 49\->A \To 53
+\Green \F-Line 9,A,13,A
+\Next 
+\Text 49,19,"EXE TO START"
+\Orange \Text 49,19,"EXE"
+\Text 49,77,"EXIT TO STOP"
+\Orange \Text 49,77,"EXIT"
+\Do:\Getkey\->A
+\LpWhile A\<>31\ And A\<>47
+A=47\=>\GotoX
+\Green \Text 11,42,"               "
+\Green \Text 18,45,"              "
+\Green \Text 25,57,"        "
+\Orange \Text 35,36,"       "
+\Text 35,19,"                           "
+\Orange \Text 42,50,"   "
+\Text 42,33,"                    "
+\Orange \Text 49,19,"   "
+\Text 49,19,"            "
+\Orange \Text 49,77,"    "
+\Text 49,77,"            "
+\GotoZ
+\Lbl X
+\Cls:\ClrText:\Stop
+\Lbl Z
+
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:85
+File Name:MSP EMPG
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Text A,3,"                               "
+\Orange \Text A,3,"                               "
+
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:713
+File Name:MSP PNT
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\r=1\=>\Goto1
+\r=2\=>\Goto2
+\r=3\=>\Goto3
+\r=4\=>\Goto4
+\Lbl 1
+\theta=7\=>\PxlOn C,B
+\theta=8\=>\Orange \PxlOn C,B
+\theta=9\=>\Green \PxlOn C,B
+\GotoZ
+\Lbl 2
+B\->E:C\->F
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"EXE TO SELECT SECOND POINT"
+\Orange \Text 57,12,"EXE"
+\Lbl A
+\If O=8426
+\Then 8426\->O
+B-15\<=99\=>\Text 3,106," "
+B-15\<=9\=>\Text 3,102," "
+\Text 3,98,B-15
+C-9\<=9\=>\Text 3,119," "
+\Text 3,115,C-9
+\IfEnd
+\Green \PxlOff C,127
+\Green \PxlOff 9,B
+\Do:\Getkey\->A
+\LpWhile A\<>31\ And A\<>38\ And A\<>28\ And A\<>27\ And A\<>37
+A=31\=>\GotoB
+\Prog "MSP MOVE"
+\GotoA
+\Lbl B
+\theta=7\=>\F-Line E,F,B,C
+\theta=8\=>\Orange \F-Line E,F,B,C
+\theta=9\=>\Green \F-Line E,F,B,C
+\GotoZ
+\Lbl 3
+B\->D:C\->E
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"CHOOCE SIZE OF CIRCLE: 1\(-)9"
+\Orange \Text 57,103,"1 9"
+\Do:\Getkey\->A
+\LpWhile A\<>72\ And A\<>62\ And A\<>52\ And A\<>73\ And A\<>63\ And A\<>53\ And A\<>74\ And A\<>64\ And A\<>54
+A=72\=>1\->E
+A=62\=>2\->E
+A=52\=>3\->E
+A=73\=>4\->E
+A=63\=>5\->E
+A=53\=>6\->E
+A=74\=>7\->E
+A=64\=>8\->E
+A=54\=>9\->E
+\theta=7\=>\Circle B,C,E
+\theta=8\=>\Orange \Circle B,C,E
+\theta=9\=>\Green \Circle B,C,E
+\GotoZ
+\Lbl 4
+\theta=7\=>\Text C,B," "
+\theta=8\=>\Orange \Text C,B," "
+\theta=9\=>\Green \Text C,B," "
+\GotoZ
+\Lbl Z
+
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:364
+File Name:MSP MOVE
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+A=38\=>\Goto1
+A=28\=>\Goto2
+A=27\=>\Goto3
+A=37\=>\Goto4
+\Lbl 1
+B=16\=>\GotoZ
+\Green \PxlOn 9,B
+B-1\->B
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=38\ And D=0
+\If A=38\ And B>25
+\Then B-9\->B
+\IfEnd
+\GotoZ
+\Lbl 2
+C=10\=>\GotoZ
+\Green \PxlOn C,127
+C-1\->C
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=28\ And D=0
+\If A=28\ And C>14
+\Then C-4\->C
+\IfEnd
+\GotoZ
+\Lbl 3
+B=126\=>\GotoZ
+\Green \PxlOn 9,B
+B+1\->B
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=27\ And D=0
+\If A=27\ And B<117
+\Then B+9\->B
+\IfEnd
+\GotoZ
+\Lbl 4
+C=54\=>\GotoZ
+\Green \PxlOn C,127
+C+1\->C
+0\->D:\Do:1\->D:\Getkey\->A
+\LpWhile A=37\ And D=0
+\If A=37\ And C<50
+\Then C+4\->C
+\IfEnd
+\GotoZ
+\Lbl Z
+
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:382
+File Name:MSP MSSG
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+57\->A:\Prog "MSP EMPG"
+M+1\->M
+M=9\=>1\->M
+M=1\=>\Goto1
+M=2\=>\Goto2
+M=3\=>\Goto3
+M=4\=>\Goto4
+M=5\=>\Goto5
+M=6\=>\Goto6
+M=7\=>\Goto7
+M=8\=>\Goto8
+\Lbl 1
+\Lbl 2
+\Text 57,12,"PIXELS AT YOUR UP AND RIGHT"
+\GotoZ
+\Lbl 3
+\Text 57,12,"IF YOU WANT TO CLEAR THE..."
+\GotoZ
+\Lbl 4
+\Text 57,12,"...SCREEN? TRY PRESSING DEL"
+\Orange \Text 57,110,"DEL"
+\GotoZ
+\Lbl 5
+\Text 57,12,"FOR MSPAINT ADVANCED..."
+\GotoZ
+\Lbl 6
+\Text 57,12,"...TRY PRESSING OPTN"
+\Orange \Text 57,77,"OPTN"
+\GotoZ
+\Lbl 7
+\Lbl 8
+\Text 57,12,"LODE.LEKKEREKWAL.COM\slashGR"
+\GotoZ
+\Lbl Z
+
+%End

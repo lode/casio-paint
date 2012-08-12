@@ -1,0 +1,49 @@
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:382
+File Name:MSP MSSG
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+57\->A:\Prog "MSP EMPG"
+M+1\->M
+M=9\=>1\->M
+M=1\=>\Goto1
+M=2\=>\Goto2
+M=3\=>\Goto3
+M=4\=>\Goto4
+M=5\=>\Goto5
+M=6\=>\Goto6
+M=7\=>\Goto7
+M=8\=>\Goto8
+\Lbl 1
+\Lbl 2
+\Text 57,12,"PIXELS AT YOUR UP AND RIGHT"
+\GotoZ
+\Lbl 3
+\Text 57,12,"IF YOU WANT TO CLEAR THE..."
+\GotoZ
+\Lbl 4
+\Text 57,12,"...SCREEN? TRY PRESSING DEL"
+\Orange \Text 57,110,"DEL"
+\GotoZ
+\Lbl 5
+\Text 57,12,"FOR MSPAINT ADVANCED..."
+\GotoZ
+\Lbl 6
+\Text 57,12,"...TRY PRESSING OPTN"
+\Orange \Text 57,77,"OPTN"
+\GotoZ
+\Lbl 7
+\Lbl 8
+\Text 57,12,"LODE.LEKKEREKWAL.COM\slashGR"
+\GotoZ
+\Lbl Z
+
+%End

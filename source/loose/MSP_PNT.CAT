@@ -1,0 +1,76 @@
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:713
+File Name:MSP PNT
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\r=1\=>\Goto1
+\r=2\=>\Goto2
+\r=3\=>\Goto3
+\r=4\=>\Goto4
+\Lbl 1
+\theta=7\=>\PxlOn C,B
+\theta=8\=>\Orange \PxlOn C,B
+\theta=9\=>\Green \PxlOn C,B
+\GotoZ
+\Lbl 2
+B\->E:C\->F
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"EXE TO SELECT SECOND POINT"
+\Orange \Text 57,12,"EXE"
+\Lbl A
+\If O=8426
+\Then 8426\->O
+B-15\<=99\=>\Text 3,106," "
+B-15\<=9\=>\Text 3,102," "
+\Text 3,98,B-15
+C-9\<=9\=>\Text 3,119," "
+\Text 3,115,C-9
+\IfEnd
+\Green \PxlOff C,127
+\Green \PxlOff 9,B
+\Do:\Getkey\->A
+\LpWhile A\<>31\ And A\<>38\ And A\<>28\ And A\<>27\ And A\<>37
+A=31\=>\GotoB
+\Prog "MSP MOVE"
+\GotoA
+\Lbl B
+\theta=7\=>\F-Line E,F,B,C
+\theta=8\=>\Orange \F-Line E,F,B,C
+\theta=9\=>\Green \F-Line E,F,B,C
+\GotoZ
+\Lbl 3
+B\->D:C\->E
+57\->A:\Prog "MSP EMPG"
+\Text 57,12,"CHOOCE SIZE OF CIRCLE: 1\(-)9"
+\Orange \Text 57,103,"1 9"
+\Do:\Getkey\->A
+\LpWhile A\<>72\ And A\<>62\ And A\<>52\ And A\<>73\ And A\<>63\ And A\<>53\ And A\<>74\ And A\<>64\ And A\<>54
+A=72\=>1\->E
+A=62\=>2\->E
+A=52\=>3\->E
+A=73\=>4\->E
+A=63\=>5\->E
+A=53\=>6\->E
+A=74\=>7\->E
+A=64\=>8\->E
+A=54\=>9\->E
+\theta=7\=>\Circle B,C,E
+\theta=8\=>\Orange \Circle B,C,E
+\theta=9\=>\Green \Circle B,C,E
+\GotoZ
+\Lbl 4
+\theta=7\=>\Text C,B," "
+\theta=8\=>\Orange \Text C,B," "
+\theta=9\=>\Green \Text C,B," "
+\GotoZ
+\Lbl Z
+
+%End
